@@ -22,11 +22,11 @@ app.use(cors())
 console.log('May Node be with you')
 
 // Helper layer (parses the requests, and adds further data).
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json())
+app.use(bodyParser.urlencoded({ extended: true }))
 
 
 // Defines all routes.
-app.use('/', routes);
+app.use('/', routes)
 
 app.listen(process.env.PORT || '8080')

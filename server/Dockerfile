@@ -11,3 +11,7 @@ RUN chown -R app:app $HOME/*
 USER app
 WORKDIR $HOME/server
 RUN npm install
+
+EXPOSE 8080
+
+CMD [ "npm", "start" ]
