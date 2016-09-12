@@ -1,0 +1,12 @@
+version: '2'
+
+services:
+    server:
+        build: server
+        volumes:
+            - ./server:/home/app/server
+            - /home/app/server/node_modules
+        ports:
+            - "8080:8080"
+    # mongo:
+    #  image: mongo:3.3.8
