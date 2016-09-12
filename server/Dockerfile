@@ -5,6 +5,8 @@ RUN useradd --user-group --create-home --shell /bin/false app &&\
 
 ENV HOME=/home/app
 
+RUN npm install -g nodemon
+
 COPY package.json npm-shrinkwrap.json $HOME/server/
 RUN chown -R app:app $HOME/*
 
@@ -14,4 +16,4 @@ RUN npm install
 
 EXPOSE 8080
 
-CMD [ "npm", "start" ]
+CMD nodemon

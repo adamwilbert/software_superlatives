@@ -5,6 +5,8 @@ router.get('/', function(req, res, next){
   res.send('hello world')
   next()
 })
-// router.get('/technologies', )
+
+const technologiesController = require('../controllers/technologies')
+router.get('/technologies', technologiesController.test)
 
 module.exports = router
