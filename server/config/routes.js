@@ -1,12 +1,11 @@
 const express = require('express')
 const router = express.Router()
 
-router.get('/', function(req, res, next){
-  res.send('hello world')
-  next()
+router.get('/', (req, res) => {
+  res.json({"message":'hello world'})
 })
 
 const technologiesController = require('../controllers/technologies')
-router.get('/technologies', technologiesController.test)
+router.get('/test', technologiesController.test)
 
 module.exports = router

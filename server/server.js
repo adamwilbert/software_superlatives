@@ -8,7 +8,6 @@ const mongoose = require('mongoose')
 const cors = require('cors')
 
 
-
 //add routing
 const routes = require('./config/routes')
 
@@ -17,6 +16,9 @@ const app = express()
 
 //allow cors
 app.use(cors())
+
+//use morgan dev logging
+app.use(logger('dev'))
 
 
 console.log('May Node be with you')
