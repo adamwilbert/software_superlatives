@@ -21,7 +21,6 @@ app.use(cors())
 app.use(logger('dev'))
 
 
-console.log('May Node be with you')
 
 // Helper layer (parses the requests, and adds further data).
 app.use(bodyParser.json())
@@ -32,3 +31,5 @@ app.use(bodyParser.urlencoded({ extended: true }))
 app.use('/', routes)
 
 app.listen(process.env.PORT || '8080')
+
+console.log('May the Node be with you...on port 8080')
