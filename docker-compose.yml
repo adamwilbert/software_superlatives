@@ -8,5 +8,13 @@ services:
             - /home/app/server/node_modules
         ports:
             - "8080:8080"
+    web:
+        build: web
+        volumes: 
+            - ./web:/usr/src/app
+            - /usr/src/app/node_modules
+        ports:
+            - "3000:3000"
+
     # mongo:
     #  image: mongo:3.3.8
