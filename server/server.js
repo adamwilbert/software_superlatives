@@ -10,6 +10,8 @@ const cors = require('cors')
 
 //add routing
 const routes = require('./config/routes')
+const db = require('./config/database')
+
 
 //instantiate app server
 const app = express()
