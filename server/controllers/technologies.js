@@ -1,6 +1,7 @@
 const dotenv = require('dotenv').load()
 const Technology = require("../models/technology")
 
+
 module.exports = {
 
     fewd(req, res) {
